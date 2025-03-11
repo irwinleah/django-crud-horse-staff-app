@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/horses/horse-index.css' %}"/>
+{% endblock %} 
+{% block content %}
+
+<section class="page-header">
+  <h1>Horse List</h1>
+  <!-- <img src="{% static 'images/.svg' %}" alt="" />
+  <img src="{% static 'images/.svg' %}" alt="" />
+  <img src="{% static 'images/.svg' %}" alt="" />
+  <img src="{% static 'images/' %}" alt="" /> -->
+</section>
+
+<section class="card-container">
+  {% for horse in horses %}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-img-container">
+          <!-- <img
+            src="{% static 'images/.svg' %}"
+            alt="A "
+          /> -->
+        </div>
+        <h2 class="card-title">{{ horse.name }}</h2>
+        {% if horse.age > 0 %}
+        <p>A {{ horse.age }} year old {{ horse.breed }}</p>
+        {% else %}
+        <p>A {{ horse.breed }} foal.</p>
+        {% endif %}
+        <p><small>{{ horse.description }}</small></p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}

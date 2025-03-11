@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/logo-image.svg' %}" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     <title>Horse Staff</title>
     {% block head %}
@@ -16,12 +16,13 @@
 <body>
     <header>
         <div class="header-logo-container">
-            <a href="/">
-                <img src="" alt="" />
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/logo-image.png' %}" alt="The Horse Staff Logo" />
             </a>
         </div>
         <nav>
             <ul>
+                <li><a href="/horses">All Horses</a></li>
                 <li><a href="/about">About</a></li>
             </ul>
         </nav>
