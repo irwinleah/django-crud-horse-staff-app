@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/horses/horse_detail.css' %}" />    
+{% endblock head %}
+
+{% block content %}
+<section>
+    <div>
+        <!-- <img src="{% static 'images/' %}" alt=""> -->
+    </div>
+    <div>
+        <h1>{{ horse.name }}</h1>
+        
+        {% if horse.age > 0 %}
+            <h2>A {{ horse.age }} year old {{ horse.breed }} </h2>
+        {% else %}
+            <h2>A {{ horse.breed }} foal. </h2>
+        {% endif %}
+        <p> {{ horse.description }} </p>
+    </div>
+</section>
+{% endblock content %}
+    

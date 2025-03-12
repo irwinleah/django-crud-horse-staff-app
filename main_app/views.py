@@ -1,30 +1,26 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
-
-class Horse:
-    def __init__(self, name, breed, description, age):
-       self.name = name
-       self.breed = breed
-       self.description = description
-       self.age = age
+from .models import Horse
 
 
-horses = [
-    Horse('Star', 'Thoroughbred', 'Sweet.', 19),
-    Horse('Fancy', 'Pony', 'Kinda rude.', 8 ),
-    Horse('Beau', 'Appaloosa', 'charmer.', 8),
-    Horse('Bandit', 'Quarter Horse', 'grumpy', 25),
-    Horse('Holly', 'Hanovarian', 'Chill', 14),
-    Horse('Poppy', 'Warmblood Cross', 'Big movement', 9),
-]
+
+
+
+
+
+def horse_index(request):
+    horses = Horse.objects.all()
+    return render(request, 'horses/index.html', {'horses': horses})
+
+def horse_detail(request, horse_id):
+    horse = Horse.objects.get(id=horse_id)
+    return render(request, 'horses/detail.html', {'horse': horse})
 
 def home(request):
     return render(request, 'home.html')
 
+
 def about(request):
     return render(request, 'about.html')
 
-
-def horse_index(request):
-    return render(request, 'horses/index.html', {'horses': horses})
