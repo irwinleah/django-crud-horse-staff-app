@@ -4,6 +4,9 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from django.http import HttpResponse
 from .models import Horse
+from .forms import FeedingForm
+
+
 
 class HorseCreate(CreateView):
     model = Horse
@@ -20,12 +23,24 @@ class HorseUpdate(UpdateView):
 class HorseDelete(DeleteView):
     model = Horse
     success_url = '/horses/'
+    
+    
+def add_feeding(request, horse_id):
+    form = FeedingForm(request.POST)
+    if form.is_valid():
+        new_feeding = form.save(commit=False)
+        new_feeding.horse_id = horse_id
+        new_feeding.save()
+    return redirect('horse-detail', horse_id=horse_id)
 
 
 # @login_required
 def horse_detail(request, horse_id):
     horse = Horse.objects.get(id=horse_id)
-    return render(request, 'horses/detail.html', {'horse': horse})
+    feeding_form = FeedingForm()
+    return render(request, 'horses/detail.html', {
+        'horse': horse, 'feeding_form': feeding_form
+        })
 
 def horse_index(request):
     horses = Horse.objects.all()
