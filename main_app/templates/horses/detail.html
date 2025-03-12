@@ -19,6 +19,10 @@
             <h2>A {{ horse.breed }} foal. </h2>
         {% endif %}
         <p> {{ horse.description }} </p>
+        <div>
+            <a href="{% url 'horse-update' horse.id %}" class="btn warn">Edit</a>
+            <a href="{% url 'horse-delete' horse.id %}" class="btn danger">Delete</a>
+        </div>
     </div>
 </section>
 {% endblock content %}
