@@ -1,12 +1,35 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView
 # from django.views.generic import ListView, DetailView # add these 
 
 from django.http import HttpResponse
-from .models import Horse
+from django.urls import reverse
+from .models import Horse, Training
 from .forms import FeedingForm
 
+class TrainingCreate(CreateView):
+    model = Training
+    fields = '__all__'
 
+class TrainingList(ListView):
+    model = Training
+
+class TrainingDetail(DetailView):
+    model = Training
+    
+class TrainingUpdate(UpdateView):
+    model = Training
+    fields = ['location', 'discipline']
+    
+    def get_success_url(self):
+        return reverse('training-detail', kwargs={'pk': self.object.pk})
+    
+class TrainingDelete(DeleteView):
+    model = Training
+    success_url = '/trainings/'
+
+  
 
 class HorseCreate(CreateView):
     model = Horse

@@ -46,3 +46,14 @@ class Feeding(models.Model):
 
     class Meta:
         ordering = ['-date']
+
+
+class Training(models.Model):
+    locaton = models.CharField(max_length=100)
+    discipline = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return f"{self.discipline} at {self.locaton}"
+    
+    def get_absolute_url(self):
+        return reverse('training-detail', kwargs={'pk': self.id})

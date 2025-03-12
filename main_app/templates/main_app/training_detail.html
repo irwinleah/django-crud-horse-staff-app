@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/trainings/training-detail.css' %}" />
+{% endblock %} 
+{% block content %}
+
+<div class="card" style="border-color: blue">
+  <div class="card-bg" style="background-color: orange"></div>
+  <div class="card-content">
+    <h2>{{ training.discipline }}</h2>
+    <p>At {{ training.location }}.</p>
+  </div>
+</div>
+<a href="{% url 'training-update' training.id %}" class="btn warn">Edit</a>
+<a href="{% url 'training-delete' training.id %}" class="btn danger">Delete</a>
+
+{% endblock %}
