@@ -22,11 +22,25 @@
         </div>
         <nav>
             <ul>
+                
+                {% if user.is_authenticated %}
                 <li><a href="{% url 'horse-index' %}">All Horses</a></li>
                 <li><a href="{% url 'training-index' %}">All Trainings</a></li>
                 <li><a href="{% url 'horse-create' %}">Add a Horse</a></li>
                 <li><a href="{% url 'training-create' %}">Add Training</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
+                <li>
+                    <form id="logout-form" method="post" action="{% url 'logout' %}">
+                      {% csrf_token %}
+                      <button type="submit">Log out</button>
+                    </form>
+                </li>
+                {% else %}
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'home' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                {% endif %}
+
             </ul>
         </nav>
     </header>

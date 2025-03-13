@@ -1,6 +1,9 @@
 from django.db import models
 from django.urls import reverse
 
+
+from django.contrib.auth.models import User
+
 class Training(models.Model):
     location = models.CharField(max_length=100)
     discipline = models.CharField(max_length=100)
@@ -30,7 +33,7 @@ class Horse(models.Model):
         choices=GRAINS,
         default=GRAINS[0][0]
     )
-    
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
         return reverse('horse-detail', kwargs={'horse_id': self.id})
