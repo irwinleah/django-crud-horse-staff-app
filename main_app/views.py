@@ -29,11 +29,11 @@ class TrainingDelete(DeleteView):
     model = Training
     success_url = '/trainings/'
 
-  
+
 
 class HorseCreate(CreateView):
     model = Horse
-    fields = ['name', 'breed', 'description', 'age']
+    fields = ['name', 'breed', 'description', 'age', 'grain_type']
 
     # def form_valid(self, form):
     #     form.instance.user = self.request.user
@@ -41,13 +41,17 @@ class HorseCreate(CreateView):
 
 class HorseUpdate(UpdateView):
     model = Horse
-    fields = ['breed', 'description', 'age']
+    fields = ['breed', 'description', 'age', 'grain_type']
 
 class HorseDelete(DeleteView):
     model = Horse
     success_url = '/horses/'
     
-    
+def associate_training(request, horse_id, training_id):
+    Horse.objects.get(id=horse_id).trainings.add(training_id)
+    return redirect('horse-detail', horse_id=horse_id)
+
+
 def add_feeding(request, horse_id):
     form = FeedingForm(request.POST)
     if form.is_valid():
@@ -60,9 +64,10 @@ def add_feeding(request, horse_id):
 # @login_required
 def horse_detail(request, horse_id):
     horse = Horse.objects.get(id=horse_id)
+    trainings_horse_doesnt_have = Training.objects.exclude(id__in = horse.trainings.all().values_list('id'))
     feeding_form = FeedingForm()
     return render(request, 'horses/detail.html', {
-        'horse': horse, 'feeding_form': feeding_form
+        'horse': horse, 'feeding_form': feeding_form, 'trainings': trainings_horse_doesnt_have
         })
 
 def horse_index(request):

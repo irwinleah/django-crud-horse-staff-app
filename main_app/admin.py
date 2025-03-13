@@ -6,3 +6,4 @@ from .models import Horse, Feeding, Training
 admin.site.register(Horse)
 admin.site.register(Feeding)
 admin.site.register(Training)
+

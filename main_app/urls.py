@@ -15,4 +15,5 @@ urlpatterns = [
     path('trainings/', views.TrainingList.as_view(), name='training-index'),
     path('training/<int:pk>/update/', views.TrainingUpdate.as_view(), name='training-update'),
     path('training/<int:pk>/delete/', views.TrainingDelete.as_view(), name='training-delete'),
+    path('horses/<int:horse_id>/associate_training/<int:training_id>/', views.associate_training, name='associate-training'),
 ]
