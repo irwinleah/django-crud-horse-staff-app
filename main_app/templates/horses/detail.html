@@ -83,9 +83,9 @@
                 <a href="{% url 'training-detail' training.id %}">
                 <p>Let's do some {{ training.discipline }} at {{ training.location }} today.</p>
                 </a>
-                <form action="{% url 'associate-training' horse.id training.id %}" method="post">
+                <form action="{% url 'remove-training' horse.id training.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" class="btn submit">Ride!</button>
+                    <button type="submit" class="btn btn-danger">Remove Training?</button>
                 </form>
             </div>
             {% endfor %}
@@ -104,7 +104,7 @@
                 </a>
                 <form action="{% url 'associate-training' horse.id training.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" class="btn submit"></button>
+                    <button type="submit" class="btn submit">Ride!</button>
                 </form>
             </div>
             {% endfor %}

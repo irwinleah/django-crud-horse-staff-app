@@ -51,6 +51,10 @@ def associate_training(request, horse_id, training_id):
     Horse.objects.get(id=horse_id).trainings.add(training_id)
     return redirect('horse-detail', horse_id=horse_id)
 
+def remove_training(request, horse_id, training_id):
+    horse = Horse.objects.get(id=horse_id)
+    horse.trainings.remove(training_id)
+    return redirect('horse-detail', horse_id=horse.id)
 
 def add_feeding(request, horse_id):
     form = FeedingForm(request.POST)
