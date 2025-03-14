@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'css/horses/horse_detail.css' %}" />
+<link rel="stylesheet" href="{% static 'css/horses/horse-detail.css' %}" />
 {% endblock head %}
 
 {% block content %}
@@ -81,7 +81,7 @@
             <div class="training-container">
                 <div class="color-block" style="background-color: blueviolet;"></div>
                 <a href="{% url 'training-detail' training.id %}">
-                <p>Let's do some {{ training.discipline }} at {{ training.location }} today.</p>
+                <p>A {{ training.discipline }} ride at {{ training.location }}</p>
                 </a>
                 <form action="{% url 'remove-training' horse.id training.id %}" method="post">
                     {% csrf_token %}
@@ -100,12 +100,19 @@
             <div class="training-container">
                 <div class="color-block" style="background-color: aquamarine;"></div>
                 <a href="{% url 'training-detail' training.id %}">
-                    <p>A {{ training.discipline }} ride at {{ training.location }}</p>
+                    <p>Let's do some {{ training.discipline }} riding at {{ training.location }}?</p>
                 </a>
+                {% if training not in horse.trainings.all %}
                 <form action="{% url 'associate-training' horse.id training.id %}" method="post">
                     {% csrf_token %}
                     <button type="submit" class="btn submit">Ride!</button>
                 </form>
+                {% else %}
+                <form action="{% url 'remove-training' horse.id training.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Remove Training</button>
+                </form>
+                {% endif %}
             </div>
             {% endfor %}
             {% else %}

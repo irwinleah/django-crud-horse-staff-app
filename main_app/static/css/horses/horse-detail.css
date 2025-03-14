@@ -74,12 +74,12 @@
 }
 
 .horse-details h1 {
-    font-size: var(--font-xxl);
+    font-size: 32px;
     margin: 15px 0 3px;
 }
 
 .horse-details h2 {
-    font-size: var(--font-xl);
+    font-size: 32px;
     margin: 0 0 10px;
     margin-top: 0;
     margin-bottom: 10px;

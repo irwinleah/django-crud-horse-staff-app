@@ -37,8 +37,19 @@ def signup(request):
 
 
 
-class Home(LoginView):
-    template_name = 'home.html'
+
+
+# @login_required
+def remove_training(request, horse_id, training_id):
+    horse = Horse.objects.get(id=horse_id)
+    training = Training.objects.get(id=training_id)
+    horse.trainings.remove(training_id)
+    return redirect('horse-detail', horse_id=horse.id)
+
+@login_required
+def associate_training(request, horse_id, training_id):
+    Horse.objects.get(id=horse_id).trainings.add(training_id)
+    return redirect('horse-detail', horse_id=horse_id)
 
 class TrainingCreate(LoginRequiredMixin, CreateView):
     model = Training
@@ -63,13 +74,9 @@ class TrainingDelete(LoginRequiredMixin, DeleteView):
 
 
 
-class HorseCreate(LoginRequiredMixin, CreateView):
-    model = Horse
-    fields = ['name', 'breed', 'description', 'age', 'grain_type']
 
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+
+
 
 class HorseUpdate(LoginRequiredMixin, UpdateView):
     model = Horse
@@ -79,17 +86,24 @@ class HorseDelete(LoginRequiredMixin, DeleteView):
     model = Horse
     success_url = '/horses/'
 
-@login_required
-def associate_training(request, horse_id, training_id):
-    Horse.objects.get(id=horse_id).trainings.add(training_id)
-    return redirect('horse-detail', horse_id=horse_id)
+class HorseCreate(LoginRequiredMixin, CreateView):
+    model = Horse
+    fields = ['name', 'breed', 'description', 'age', 'grain_type']
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+    
 @login_required
-def remove_training(request, horse_id, training_id):
+def horse_detail(request, horse_id):
     horse = Horse.objects.get(id=horse_id)
-    horse.trainings.remove(training_id)
-    return redirect('horse-detail', horse_id=horse.id)
+    trainings_horse_doesnt_have = Training.objects.exclude(id__in = horse.trainings.all().values_list('id'))
+    feeding_form = FeedingForm()
+    return render(request, 'horses/detail.html', {
+        'horse': horse, 'feeding_form': feeding_form, 'trainings': trainings_horse_doesnt_have
+        })
 
+@login_required
 def add_feeding(request, horse_id):
     form = FeedingForm(request.POST)
     if form.is_valid():
@@ -99,14 +113,6 @@ def add_feeding(request, horse_id):
     return redirect('horse-detail', horse_id=horse_id)
 
 
-@login_required
-def horse_detail(request, horse_id):
-    horse = Horse.objects.get(id=horse_id)
-    trainings_horse_doesnt_have = Training.objects.exclude(id__in = horse.trainings.all().values_list('id'))
-    feeding_form = FeedingForm()
-    return render(request, 'horses/detail.html', {
-        'horse': horse, 'feeding_form': feeding_form, 'trainings': trainings_horse_doesnt_have
-        })
     
 @login_required
 def horse_index(request):
@@ -115,8 +121,14 @@ def horse_index(request):
     return render(request, 'horses/index.html', {'horses': horses})
 
 
-def home(request):
-    return render(request, 'home.html')
+
+
+
+
+class Home(LoginView):
+    template_name = 'home.html'
+
+
 
 
 def about(request):

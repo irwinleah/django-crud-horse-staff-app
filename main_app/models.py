@@ -24,9 +24,9 @@ GRAINS = (
     
 class Horse(models.Model):
     name = models.CharField(max_length=100)
+    age = models.IntegerField()
     breed = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
-    age = models.IntegerField()
     trainings = models.ManyToManyField(Training)
     grain_type = models.CharField(
         max_length=2,
