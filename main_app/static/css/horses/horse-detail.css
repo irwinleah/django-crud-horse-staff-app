@@ -16,6 +16,9 @@
     align-items: center; */
     flex-wrap: wrap;
   }
+  #id_time, #id_grain_type, #id_date {
+    font-family: 'Times New Roman', Times, serif;
+  }
 
   .feedings, .trainings {
     width: 48%;
@@ -23,9 +26,9 @@
     flex: 1;
   }
 
-  .trainings {
+  /* .trainings {
     align-items: flex-end;
-  }
+  } */
   
   .horse-img {
     width: 75%;
@@ -34,7 +37,7 @@
   
   .usr-img {
     width: 100%;
-    border-radius: var(--card-border-radius);
+
   }
   
   .horse-details {
@@ -114,7 +117,6 @@
     width: 100%;
     min-width: 360px;
     border: var(--borders);
-    border-radius: var(--card-border-radius);
     padding: 10px;
     box-shadow: var(--card-box-shadow);
     display: flex;
@@ -171,7 +173,7 @@
   .feedings th {
     font-size: var(--font-l);
     padding: 5px 5px 0;
-    border-bottom: rgb(248, 36, 223) solid 2px;
+    border-bottom: rgb(40, 188, 2) solid 2px;
   }
   
   .feedings tr:nth-child(even) {

@@ -27,15 +27,15 @@ html {
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     min-height: 100vh;
-    --nav-bg: rgba(17, 154, 63, 0.7);
+    --nav-bg: rgb(240, 250, 181);
     --nav-bg-ff: rgba(130, 12, 145, 0.9);
     --borders: rgb(3, 41, 102) solid 2px;
     --text-color: rgb(17, 20, 17);
-    --link-hover-color: rgb(201, 210, 231);
-    --button-bg: rgb(137, 18, 18);
-    --button-bg-hover: rgb(137, 201, 47);
-    --submit: rgb(226, 34, 226);
-    --warn: rgb(255, 0, 0);
+    --link-hover-color: rgb(249, 68, 1);
+    --button-bg:rgb(240, 250, 181);
+    --button-bg-hover: rgb(205, 255, 4);
+    --submit: rgb(3, 115, 6);
+    --warn: rgb(255, 115, 0);
     --danger: rgb(220, 20, 30);
     --secondary: rgb(16, 177, 240);
     --card-box-shadow: #fa084d;
@@ -44,13 +44,14 @@ html {
     --font-xl: 2.4rem;
     --font-l: 1.8rem;
     --font-reg: 1.6rem;
-    --card-border-radius: 6px;
+
   }
   
   header {
     width: 100%;
-    background: red;
+    background: rgb(213, 250, 1);
     border-bottom: purple;
+
   }
   nav {
     margin: 10px;
@@ -246,7 +247,7 @@ html {
       margin: 0;
       background: var(--nav-bg-ff);
       border: var(--borders);
-      border-radius: 8px;
+
     }
   
     nav {
@@ -255,9 +256,9 @@ html {
   
     .header-logo-container {
       /* visual fix to help align logo */
-      padding-top: 6px;
-      width: 256px;
-      height: 35px;
+      padding-top: 5px;
+      width: 85px;
+      height: 65px;
     }
   
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -268,7 +269,7 @@ html {
   
       nav,
       .header-logo-container {
-        background: rgba(137, 152, 19, 0.6);
+        background: var(--button-bg);
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
       }

@@ -30,7 +30,7 @@ td > * {
 
 td > textarea {
     height: calc(4 * var(--font-l) + 8px);
-    font-family: inherit;
+    font-family: 'Times New Roman', Times, serif
 }
 
 .btn {
@@ -40,5 +40,5 @@ td > textarea {
 
 .add-training-form {
     display: flex;
-    
+
 }

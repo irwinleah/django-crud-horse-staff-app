@@ -1,3 +1,5 @@
+
+
 main {
   display: flex;
   align-items: flex-end;
@@ -37,6 +39,7 @@ main {
 
 .btn {
   margin-bottom: 15px;
+  color: var(--nav-bg-ff);
 }
 
 .card h2 {

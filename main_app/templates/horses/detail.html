@@ -97,12 +97,12 @@
                 {% if training not in horse.trainings.all %}
                 <form action="{% url 'associate-training' horse.id training.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" class="btn-ride">Ride!</button>
+                    <button type="submit" class="btn submit">Ride!</button>
                 </form>
                 {% else %}
                 <form action="{% url 'remove-training' horse.id training.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-danger">Remove Training</button>
+                    <button type="submit" class="btn danger">Remove Training</button>
                 </form>
                 {% endif %}
             </div>

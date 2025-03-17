@@ -13,11 +13,10 @@
 <section class="card-container">
     
     {% for training in training_list %}
-        <div class="card" style="border-color: blue;">
-            <div class="card-bg" style="background-color: orange;"></div>
+        <div class="card">
             <a href="{% url 'training-detail' training.id %}">
                 <div class="card-content">
-                    <h2>{{ training.discipline }}</h2>
+                    <h2 class="card-title">{{ training.discipline }}</h2>
                     <p>At {{ training.location }}.</p>
                 </div>
             </a>
