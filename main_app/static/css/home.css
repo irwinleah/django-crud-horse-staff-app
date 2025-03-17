@@ -20,11 +20,12 @@ main {
   }
   
   .logo-container {
-    max-width: 375px;
+    max-width: 100px;
+    max-height: 100px;
   }
   
   .horse-container {
-    width: 80%;
+    width: 100%;
   }
   
   .login {
@@ -78,10 +79,11 @@ main {
       border-radius: var(--card-border-radius);
       box-shadow: var(--card-box-shadow);
       width: 100%;
+      background-color: white;
     }
   
     .logo-container {
-      max-width: 520px;
+      max-width: 540px;
     }
   }
   

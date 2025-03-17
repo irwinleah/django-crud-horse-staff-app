@@ -90,7 +90,7 @@
             {% for training in trainings.all %}
             <div class="training-container">
                 <a href="{% url 'training-detail' training.id %}">
-                    <p>{{ training.discipline }} riding at {{ training.location }}?</p>
+                    <p>{{ training.discipline }} riding at {{ training.location }}</p>
                 </a>
                 {% if training not in horse.trainings.all %}
                 <form action="{% url 'associate-training' horse.id training.id %}" method="post">
