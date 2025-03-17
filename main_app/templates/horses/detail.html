@@ -8,7 +8,7 @@
 {% block content %}
 <section class="horse-container">
     <div class="horse-img">
-        <!-- <img src="{% static 'images/' %}" alt=""> -->
+        <img src="{% static 'images/default-horse.png' %}" alt="Default horse image">
     </div>
     <div class="horse-details">
         <h1>{{ horse.name }}</h1>
@@ -18,7 +18,7 @@
         {% else %}
         <h2>A {{ horse.breed }} foal. </h2>
         {% endif %}
-        <h3>{{ horse.grain_type }} </h3>
+        <h3>{{ horse.get_grain_type_display }} </h3>
         <p> {{ horse.description }} </p>
         <div class="horse-actions">
             <a href="{% url 'horse-update' horse.id %}" class="btn warn">Edit</a>
@@ -41,9 +41,6 @@
             <button type="submit" class="btn submit">Add Feeding</button>
         </form>
         <table>
-            <h3>Past Feedings</h3>
-
-            {% if horse.feeding_set.all.count %}
             <thead>
                 <tr>
                     <th>Date</th>
@@ -61,13 +58,7 @@
                 {% endfor %}
             </tbody>
         </table>
-        {% else %}
-        <div class="subsection-content">
-            <p>⚠️ {{horse.name}} has not been fed!</p>
-        </div>
     </section>
-
-
 
     <section class="trainings">
         <div class="subsection-title">
@@ -78,14 +69,15 @@
         <div class="subsection-content">
             {% if horse.trainings.count %}
             {% for training in horse.trainings.all %}
-            <div class="training-container">
-                <div class="color-block" style="background-color: blueviolet;"></div>
+            <div class="trainings-container">
+                <div class="color-block"></div>
                 <a href="{% url 'training-detail' training.id %}">
-                <p>A {{ training.discipline }} ride at {{ training.location }}</p>
+                    <p>A {{ training.discipline }} ride at {{ training.location }}</p>
                 </a>
                 <form action="{% url 'remove-training' horse.id training.id %}" method="post">
                     {% csrf_token %}
                     <button type="submit" class="btn btn-danger">Remove Training?</button>
+                    <a href="{% url 'training-update' training.id %}" class="btn warn">Edit</a>
                 </form>
             </div>
             {% endfor %}
@@ -98,14 +90,14 @@
             {% if trainings.count %}
             {% for training in trainings.all %}
             <div class="training-container">
-                <div class="color-block" style="background-color: aquamarine;"></div>
+                <div class="color-block"></div>
                 <a href="{% url 'training-detail' training.id %}">
                     <p>Let's do some {{ training.discipline }} riding at {{ training.location }}?</p>
                 </a>
                 {% if training not in horse.trainings.all %}
                 <form action="{% url 'associate-training' horse.id training.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" class="btn submit">Ride!</button>
+                    <button type="submit" class="btn-ride">Ride!</button>
                 </form>
                 {% else %}
                 <form action="{% url 'remove-training' horse.id training.id %}" method="post">
@@ -116,10 +108,12 @@
             </div>
             {% endfor %}
             {% else %}
-                <p class="all-trainings">{{ horse.name }} already trained.</p>
+            <p class="all-trainings">{{ horse.name }} already trained.</p>
             {% endif %}
         </div>
     </section>
+
 </div>
-{% endif %}
+
+
 {% endblock content %}
