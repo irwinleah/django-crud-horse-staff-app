@@ -70,9 +70,8 @@
             {% if horse.trainings.count %}
             {% for training in horse.trainings.all %}
             <div class="trainings-container">
-                <div class="color-block"></div>
                 <a href="{% url 'training-detail' training.id %}">
-                    <p>A {{ training.discipline }} ride at {{ training.location }}</p>
+                    <p>{{ training.discipline }} ride at {{ training.location }}</p>
                 </a>
                 <form action="{% url 'remove-training' horse.id training.id %}" method="post">
                     {% csrf_token %}
@@ -90,9 +89,8 @@
             {% if trainings.count %}
             {% for training in trainings.all %}
             <div class="training-container">
-                <div class="color-block"></div>
                 <a href="{% url 'training-detail' training.id %}">
-                    <p>Let's do some {{ training.discipline }} riding at {{ training.location }}?</p>
+                    <p>{{ training.discipline }} riding at {{ training.location }}?</p>
                 </a>
                 {% if training not in horse.trainings.all %}
                 <form action="{% url 'associate-training' horse.id training.id %}" method="post">
