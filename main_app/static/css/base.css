@@ -25,22 +25,20 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     min-height: 100vh;
-    --nav-bg: rgba(104, 197, 248, 0.7);
-    --nav-bg-ff: rgba(104, 197, 248, 0.9);
-    --borders: rgb(36, 116, 248) solid 2px;
+    --nav-bg: rgba(17, 154, 63, 0.7);
+    --nav-bg-ff: rgba(130, 12, 145, 0.9);
+    --borders: rgb(3, 41, 102) solid 2px;
     --text-color: rgb(17, 20, 17);
-    --link-hover-color: rgb(16, 56, 158);
-    --button-bg: rgb(245, 245, 245);
-    --button-bg-hover: rgb(226, 226, 226);
-    --submit: rgb(26, 128, 0);
-    --warn: rgb(255, 102, 0);
+    --link-hover-color: rgb(201, 210, 231);
+    --button-bg: rgb(137, 18, 18);
+    --button-bg-hover: rgb(137, 201, 47);
+    --submit: rgb(226, 34, 226);
+    --warn: rgb(255, 0, 0);
     --danger: rgb(220, 20, 30);
-    --secondary: rgb(57, 57, 57);
-    --card-box-shadow: 5px 5px 6px -1px #aaa;
+    --secondary: rgb(16, 177, 240);
+    --card-box-shadow: #fa084d;
     --font-xtreme: 4.2rem;
     --font-xxl: 3.6rem;
     --font-xl: 2.4rem;
@@ -51,10 +49,9 @@ html {
   
   header {
     width: 100%;
-    background: var(--nav-bg-ff); /* rgba(104, 197, 248, .9) */
-    border-bottom: var(--borders);
+    background: red;
+    border-bottom: purple;
   }
-  
   nav {
     margin: 10px;
   }
@@ -249,7 +246,7 @@ html {
       margin: 0;
       background: var(--nav-bg-ff);
       border: var(--borders);
-      border-radius: 18px;
+      border-radius: 8px;
     }
   
     nav {
@@ -271,7 +268,7 @@ html {
   
       nav,
       .header-logo-container {
-        background: rgba(104, 197, 248, 0.6);
+        background: rgba(137, 152, 19, 0.6);
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
       }

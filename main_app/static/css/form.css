@@ -37,3 +37,8 @@ td > textarea {
     align-self: flex-end;
     margin-right: 40px;
 }
+
+.add-training-form {
+    display: flex;
+    
+}

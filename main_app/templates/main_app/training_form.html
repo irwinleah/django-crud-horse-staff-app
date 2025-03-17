@@ -4,26 +4,22 @@
 <link rel="stylesheet" href="{% static 'css/form.css' %}">
 {% endblock head %}
 {% block content %}
+
 <div class="page-header">
-    <h1>Edit Training</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save Changes</button>
-</form>
-    <!-- {% if object %}
-    <h1>Edit Training</h1>
+    
+    {% if training %}
+        <h1>Edit Training</h1>
     {% else %}
-    <h1>Add a Training</h1>
+        <h1>Add Training</h1>
     {% endif %}
-    <img src="{% static 'images/' %}" alt="">
+        <img src="{% static 'images/training-outline.gif' %}" alt="A horse and rider outline" />
 </div>
-<form action="" method="post" class="form-container" autocomplete="off">
-    {% csrf_token %}
-    <table>
+<form action="" method="post" class="form-container">
+        {% csrf_token %}
+        <table>
         {{ form.as_table }}
-    </table>
-    <button type="submit" class="btn submit">Submit!</button>
-</form> -->
+        </table>
+    <button type="submit" class="btn submit">Save Changes</button>
+</form>
 
 {% endblock content %}

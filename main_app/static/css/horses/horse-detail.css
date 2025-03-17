@@ -171,7 +171,7 @@
   .feedings th {
     font-size: var(--font-l);
     padding: 5px 5px 0;
-    border-bottom: rgb(36, 116, 248) solid 2px;
+    border-bottom: rgb(248, 36, 223) solid 2px;
   }
   
   .feedings tr:nth-child(even) {
