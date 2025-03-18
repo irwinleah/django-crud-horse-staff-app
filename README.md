@@ -1,5 +1,7 @@
+<div id="banner" align="center" >
+<img width="250" alt="Screenshot 2025-03-13 at 3 50 30 PM" src="https://github.com/user-attachments/assets/7eae73be-25c7-4746-9a20-0d4238f1d190" />
+</div>
 
-!["Horse staff logo"](images/hs-logo-image.png) 
 
 <div id="description" align="center">
 
@@ -7,13 +9,13 @@
 
 ### The Team!
 
-#### Leah Irwin - Programmer, Deployment Manager
+#### Leah Irwin - Programmer, Project, GitHub & Deployment Manager
 
 [![Linkedin Badge](https://img.shields.io/badge/-@leahirwin-blue?style=flat&logo=Linkedin&logoColor=black)](www.linkedin.com/in/leah-irwin-280722205)
 
 ## Description
 
-Horse Staff App 
+Welcome to Horse Staff, the app that holds your horses! Owning and working with hroses can take a lot of time (and money), using the Horse Staff App could help save you some headaches in the future. Horse Staff keeps track of your horses' feeding and trainings. 
 
 </div>
 
@@ -21,10 +23,10 @@ Horse Staff App
 
 |    Description    | Screenshot                                         |
 | :---------------: | -------------------------------------------------- |
-|    **Sign up**    | <img src="images/sign-in.png" width="700"/>        |
-| **Your Horses** | <img src="images/booking-list.png" width="700"/>   |
-|    **Trainings**    | <img src="images/rental-list.png" width="700"/>    |
-|  **Training Page**  | <img src="images/rental-details.png" width="700"/> |
+|    **Sign up**    |        |
+| **Your Horses** |   |
+|    **Trainings**    |     |
+|  **Training Page**  |  |
 
 
 ## Technologies Used
