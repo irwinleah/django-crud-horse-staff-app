@@ -9,7 +9,7 @@
 
 ### The Team!
 
-#### Leah Irwin - Programmer, Project, GitHub & Deployment Manager
+#### Leah Irwin - Programmer
 
 [![Linkedin Badge](https://img.shields.io/badge/-@leahirwin-blue?style=flat&logo=Linkedin&logoColor=black)](www.linkedin.com/in/leah-irwin-280722205)
 
