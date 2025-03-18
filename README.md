@@ -76,6 +76,7 @@ Welcome to Horse Staff, the app that holds your horses! Owning and working with 
 ## Upcoming Features
 
 - [ ] Users can upload a photo of their horses.
+- [ ] Barns can change colors of their horses or trinings if they would rather color code each horse or training.
 - [ ] The trainings are pre-selected and a determined photo will pop up as the background image of the training.
 - [ ] Hamburger NavBar.
 - [ ] Add more notes for each training.
