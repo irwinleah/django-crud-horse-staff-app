@@ -25,7 +25,7 @@ Welcome to Horse Staff, the app that holds your horses! Owning and working with 
 | :---------------: | -------------------------------------------------- |
 |    **Sign up**    |  <img width="1503" alt="Screenshot 2025-03-17 at 8 53 47 PM" src="https://github.com/user-attachments/assets/db49b547-c152-4d45-bfe0-bf93038d165c" />  |
 | **Your Horses** | ![Screenshot 2025-03-17 at 8 16 35 PM](https://github.com/user-attachments/assets/15624b2b-1926-4a15-8871-9fbe3301fa29) |
-| **Horse Page ** | <img width="1504" alt="Screenshot 2025-03-17 at 8 58 54 PM" src="https://github.com/user-attachments/assets/eb61649e-a983-41c1-888c-5b741a81c7fc" /> |
+| **Horse Page** | <img width="1504" alt="Screenshot 2025-03-17 at 8 58 54 PM" src="https://github.com/user-attachments/assets/eb61649e-a983-41c1-888c-5b741a81c7fc" /> |
 |    **Trainings**   | <img width="1497" alt="Screenshot 2025-03-17 at 8 49 27 PM" src="https://github.com/user-attachments/assets/a3140dfb-55fd-48e1-ae58-bfcbfee8f938" /> |
 |  **Training Page**  |<img width="1502" alt="Screenshot 2025-03-17 at 8 54 39 PM" src="https://github.com/user-attachments/assets/9af4d134-3c05-4252-92eb-1d0e89ce7044" /> |
 
