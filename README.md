@@ -1,6 +1,7 @@
 <div id="banner" align="center" >
-<img src="images/hs-logo-image.png" width="400" height="400">
+<img width="250" alt="Screenshot 2025-03-13 at 3 50 30 PM" src="https://github.com/user-attachments/assets/7eae73be-25c7-4746-9a20-0d4238f1d190" />
 </div>
+
 
 <div id="description" align="center">
 
