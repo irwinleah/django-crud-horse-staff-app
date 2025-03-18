@@ -1,5 +1,5 @@
 <div id="banner" align="center" >
-<img width="250" alt="Screenshot 2025-03-13 at 3 50 30 PM" src="https://github.com/user-attachments/assets/7eae73be-25c7-4746-9a20-0d4238f1d190" />
+<img width="250" alt="Horse Staff Logo of a blue 'H' and 'S' with orange background" src="https://github.com/user-attachments/assets/7eae73be-25c7-4746-9a20-0d4238f1d190" />
 </div>
 
 
@@ -44,9 +44,9 @@ Welcome to Horse Staff, the app that holds your horses! Owning and working with 
 
 ## Using Horse Staff
 
-  <details >
+<details >
   <summary> How to Feed a Horse </summary>
-    Navigate to the horses page to browse your inventory of horses. Click on a horse card to be directed to the information page of that horse. Click 'Feed Horse' to feed that horse; You have two options for time, AM or PM, pick the date and then select grain type that is listed in their card information
+    Navigate to the horses page to browse your inventory of horses. Click on a horse card to be directed to the information page of that horse. Click 'Feed Horse' to feed that horse; You have        two options for time, AM or PM, pick the date and then select grain type that is listed in their card information
 </details>
 
 <details>
@@ -69,14 +69,14 @@ Welcome to Horse Staff, the app that holds your horses! Owning and working with 
 <details open>
   <summary> Deployed Link </summary>
   <a href="https://django-crud-horse-staff-app-b5a53f165341.herokuapp.com/"
-    >https://django-crud-horse-staff-app-b5a53f165341.herokuapp.com/</a
-  >
+    >https://django-crud-horse-staff-app-b5a53f165341.herokuapp.com/</a>
 </details>
 
 ## Upcoming Features
 
 - [ ] Users can upload a photo of their horses.
-- [ ] Barns can change colors of their horses or trinings if they would rather color code each horse or training.
+- [ ] Have dates for the training.
+- [ ] Barns can change colors of their horses or trainings if they would rather color code each horse or training.
 - [ ] The trainings are pre-selected and a determined photo will pop up as the background image of the training.
 - [ ] Hamburger NavBar.
 - [ ] Add more notes for each training.
