@@ -75,8 +75,10 @@
                 </a>
                 <form action="{% url 'remove-training' horse.id training.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-danger">Remove Training?</button>
-                    <a href="{% url 'training-update' training.id %}" class="btn warn">Edit</a>
+                    <button type="submit" class="btn danger">Remove Training?</button>
+                <form action="{% url 'training-update' training.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn warn">Edit</button>
                 </form>
             </div>
             {% endfor %}

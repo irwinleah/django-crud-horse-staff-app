@@ -7,7 +7,7 @@ body {
   min-height: 100vh;
   --nav-bg: rgba(17, 154, 63, 0.7);
   --borders: rgb(3, 41, 102) solid 2px;
-  --link-hover-color: rgb(201, 210, 231);
+  --link-hover-color: rgb(249, 68, 1);
   --button-bg:rgb(240, 250, 181);
   --button-bg-hover: rgb(205, 255, 4);
   --submit: rgb(3, 115, 6);
