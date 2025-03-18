@@ -44,12 +44,18 @@ Horse Staff App
 
   <details >
   <summary> How to Feed a Horse </summary>
-    Navigate to the horses page to browse your inventory of horses. Click on a horse to be directed to the information page of that horse. Click 'Feed Horse' to make feed that horse; 
+    Navigate to the horses page to browse your inventory of horses. Click on a horse card to be directed to the information page of that horse. Click 'Feed Horse' to feed that horse; You have two options for time, AM or PM, pick the date and then select grain type that is listed in their card information
 </details>
 
 <details>
-  <summary> How to Manage Your Horses /summary>
-  Enter a summary here
+  <summary> How to Manage Your Horses </summary>
+  You can add a horse by navigating to the 'Add a Horse' link in the navbar. Fill out the form with their name, age, breed, description, and grain type.
+  You can edit or delete the horse later on.
+</details>
+<details>
+  <summary> How to Manage Your Training </summary>
+  You can add a training by navigating to the 'Add Training' link in the navbar. Fill out the form with the the discipline and location.
+  You can edit or delete the training later on.
 </details>
 
 <details open>
@@ -67,4 +73,6 @@ Horse Staff App
 
 ## Upcoming Features
 
-- [ ] Users can login as renters and create rental properties.
+- [ ] Users can upload a photo of their horses.
+- [ ] The trainings are pre-selected and a determined photo will pop up as the background image of the training.
+- [ ] Hamburger NavBar

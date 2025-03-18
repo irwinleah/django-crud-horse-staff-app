@@ -1,27 +1,3 @@
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Times New Roman', Times, serif;
-  min-height: 100vh;
-  --nav-bg: rgba(17, 154, 63, 0.7);
-  --borders: rgb(3, 41, 102) solid 2px;
-  --link-hover-color: rgb(249, 68, 1);
-  --button-bg:rgb(240, 250, 181);
-  --button-bg-hover: rgb(205, 255, 4);
-  --submit: rgb(3, 115, 6);
-  --warn: rgb(255, 115, 0);
-  --danger: rgb(220, 20, 30);
-  --secondary: rgb(16, 177, 240);
-  --card-box-shadow: #fa084d;
-  --font-xtreme: 4.2rem;
-  --font-xxl: 3.6rem;
-  --font-xl: 2.4rem;
-  --font-l: 1.8rem;
-  --font-reg: 1.6rem;
-  --card-border-radius: 6px;
-}
 
 main {
   display: flex;

@@ -1,8 +1,8 @@
-{% extends 'base.html' %} 
-{% load static %} 
+{% extends 'base.html' %}
+{% load static %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/trainings/training-detail.css' %}" />
-{% endblock %} 
+{% endblock %}
 {% block content %}
 
 <div class="card">
@@ -15,4 +15,4 @@
 <a href="{% url 'training-update' training.id %}" class="btn warn">Edit</a>
 <a href="{% url 'training-delete' training.id %}" class="btn danger">Delete</a>
 
-{% endblock %}
+  {% endblock %}

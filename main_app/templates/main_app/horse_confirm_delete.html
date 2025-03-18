@@ -11,7 +11,7 @@
 
 <form action="" method="post" class="form">
     {% csrf_token %}
-    <a href="{% url 'horse-detail' horse.id %}" class="btn secondary">Cancel</a>
+    <a href="{% url 'horse-detail' horse.id %}" class="btn warn">Cancel</a>
     <button type="submit" class="btn danger">Yes - Delete!</button>
 </form>
 
