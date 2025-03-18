@@ -80,3 +80,9 @@ Welcome to Horse Staff, the app that holds your horses! Owning and working with 
 - [ ] The trainings are pre-selected and a determined photo will pop up as the background image of the training.
 - [ ] Hamburger NavBar.
 - [ ] Add more notes for each training.
+- [ ] Add a grooming log.
+- [ ] Add a veterinarian log/instructions.
+- [ ] Add a farrier log/instruction.
+
+
+p.s. After working on this project, I can see two routes it can take in the future. Horse Staff could stay as a task and morphing into a chore organizer app for equestrian barns to utilize. Another direction Horse Staff could develop into would be a gaming app.
