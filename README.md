@@ -85,4 +85,4 @@ Welcome to Horse Staff, the app that holds your horses! Owning and working with 
 - [ ] Add a farrier log/instruction.
 
 
-p.s. After working on this project, I can see two routes it can take in the future. Horse Staff could stay as a task and morphing into a chore organizer app for equestrian barns to utilize. Another direction Horse Staff could develop into would be a gaming app.
+p.s. After working on this project, I can see two routes it can take in the future. Horse Staff could stay as a chore organizer and morph into a task manager app for equestrian barns to utilize. Another direction Horse Staff could develop into would be a gaming app.
