@@ -15,7 +15,7 @@
 
 ## Description
 
-Welcome to Horse Staff, the app that holds your horses! Owning and working with hroses can take a lot of time (and money), using the Horse Staff App could help save you some headaches in the future. Horse Staff keeps track of your horses' feeding and trainings. 
+Welcome to Horse Staff, the app that holds your horses! Owning and working with horses can require a lot of time (and money), using the Horse Staff App could help save you some headaches in the future. Horse Staff keeps track of your horses' feedings and trainings. 
 
 </div>
 
