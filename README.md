@@ -1,6 +1,5 @@
-<div id="banner" align="center" >
-<img src="images/hs-logo-image.png" width="400" height="400">
-</div>
+
+!["Horse staff logo"](images/hs-logo-image.png) 
 
 <div id="description" align="center">
 
@@ -40,7 +39,7 @@ Horse Staff App
 ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 ![Django](https://img.shields.io/badge/-Django-05122A?style=flat&logo=django)
 
-## Using Paw Pads
+## Using Horse Staff
 
   <details >
   <summary> How to Feed a Horse </summary>
@@ -66,8 +65,8 @@ Horse Staff App
 
 <details open>
   <summary> Deployed Link </summary>
-  <a href="https://horsestaff.netlify.app/"
-    >https://horsestaff.netlify.app/</a
+  <a href="https://django-crud-horse-staff-app-b5a53f165341.herokuapp.com/"
+    >https://django-crud-horse-staff-app-b5a53f165341.herokuapp.com/</a
   >
 </details>
 
