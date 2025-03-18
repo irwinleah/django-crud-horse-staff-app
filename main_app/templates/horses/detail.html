@@ -18,7 +18,7 @@
         {% else %}
         <h2>A {{ horse.breed }} foal. </h2>
         {% endif %}
-        <h3>{{ horse.get_grain_type_display }} </h3>
+        <h3>Grain Type: {{ horse.get_grain_type_display }}</h3>
         <p> {{ horse.description }} </p>
         <div class="horse-actions">
             <a href="{% url 'horse-update' horse.id %}" class="btn warn">Edit</a>

@@ -222,8 +222,8 @@ html {
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
       header {
         background: var(--nav-bg);
-        -webkit-backdrop-filter: blur(3px);
-        backdrop-filter: blur(3px);
+        /* -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px); */
       }
     }
   }
@@ -270,8 +270,8 @@ html {
       nav,
       .header-logo-container {
         background: var(--button-bg);
-        -webkit-backdrop-filter: blur(3px);
-        backdrop-filter: blur(3px);
+        /* -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px); */
       }
     }
   }
